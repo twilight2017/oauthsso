@@ -1,6 +1,6 @@
 package config
 
-type App struct {
+type APP struct {
 	Session struct {
 		Name      string `yaml:"name"`
 		SecretKey string `yaml:"secret_key"`
@@ -50,6 +50,7 @@ type OAuth2Client struct {
 	Scope  []Scope `yaml:"scope"`
 }
 
+// scope以id作为唯一主键，title是权限名称
 type Scope struct {
 	ID    string `yaml:"id"`
 	Title string `yaml:"title"`
