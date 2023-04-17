@@ -20,6 +20,7 @@ func SetUp() {
 		log.Fatalf("error: %v", err)
 	}
 
+	// 将yaml格式的配置文件内容解析到一个cfg结构体变量中
 	err = yaml.Unmarshal(content, &cfg)
 	if err != nil {
 		log.Fatalf("error: %v", err)
