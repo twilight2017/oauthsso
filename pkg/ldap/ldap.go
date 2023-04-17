@@ -135,6 +135,8 @@ func UserAuthentication(username, password string) (string, error) {
 	userdn := sr.Entries[0].DN
 
 	//Bind as the user to verfify their password
+	// 这段代码是对LDAP连接进行用户绑定，即使用指定的用户名和密码对LDAP连接进行认证
+	//该操作需要在LDAP服务器上已经存在一个对应的账号，并且该账号具有登录权限
 	if err := s.ldapConn.Bind(userdn, password); err != nil {
 		return "", err
 	}
