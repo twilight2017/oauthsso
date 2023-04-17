@@ -56,9 +56,9 @@ type Scope struct {
 }
 
 type LDAP struct {
-	URL            string `yaml:"url"`
-	SearchDN       string `yaml:"search_dn"`
-	SearchPassword string `yaml:"search_password"`
-	BaseDN         string `yaml:"base_dn"`
-	Filter         string `yaml:"filter"`
+	URL            string `yaml:"url"`             //LDAP服务器的URL
+	SearchDN       string `yaml:"search_dn"`       //执行LDAP搜索时使用的管理员账号DN(Distinguished Name)
+	SearchPassword string `yaml:"search_password"` //执行LDAP搜索时使用的管理员账号密码
+	BaseDN         string `yaml:"base_dn"`         //执行LDAP搜索时的起始结点DN
+	Filter         string `yaml:"filter"`          //LDAP搜索的过滤器
 }
