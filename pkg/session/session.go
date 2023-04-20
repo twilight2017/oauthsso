@@ -3,7 +3,7 @@ package session
 import (
 	"encoding/gob"
 	"github.com/gorilla/sessions"
-	"gopkg.in/boj/redistore.v1"
+	//"gopkg.in/boj/redistore.v1"
 	"net/http"
 	"net/url"
 	"oauthsso/config"
